@@ -17,8 +17,13 @@
       body::before { content: ""; position: fixed; width: 420px; height: 420px; right: -150px; top: -180px; border-radius: 50%; background: #ffe6a5; filter: blur(15px); opacity: .7; pointer-events: none; }
       main { position: relative; width: min(100% - 40px, 720px); margin: 0 auto; padding: clamp(64px, 12vh, 110px) 0 60px; }
       .eyebrow { margin: 0 0 15px; color: #b86a29; font-size: 12px; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
+      .hero { display: grid; grid-template-columns: minmax(0, 1fr) 190px; align-items: center; gap: 22px; }
       h1 { margin: 0; font-size: clamp(52px, 11vw, 92px); line-height: .99; letter-spacing: -.075em; font-weight: 850; }
       .intro { max-width: 470px; margin: 23px 0 70px; color: #62665b; font-size: clamp(17px, 2.5vw, 20px); line-height: 1.5; }
+      .avatar-wrap { position: relative; display: grid; place-items: center; width: 190px; height: 190px; border: 2px solid #ecd9ad; border-radius: 50%; background: radial-gradient(circle at 50% 35%, #fffaf0, #ffe7ae); box-shadow: 0 8px 22px #9e763020; }
+      .avatar-wrap img { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: contain; }
+      .avatar-wrap::after { content: "✦"; position: absolute; top: 5px; right: -8px; color: #e8a62b; font-size: 30px; animation: twinkle 3.5s ease-in-out infinite; }
+      @keyframes twinkle { 0%, 100% { opacity: .5; transform: scale(.85) rotate(-12deg); } 50% { opacity: 1; transform: scale(1.12) rotate(12deg); } }
       .section-heading { display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 13px; border-bottom: 2px solid #dcd9cb; }
       h2 { margin: 0; font-size: 18px; letter-spacing: -.025em; }
       .count { color: #9b9d8f; font-size: 13px; font-weight: 700; }
@@ -34,18 +39,26 @@
       footer a { color: #805b36; text-underline-offset: 3px; }
       @media (max-width: 480px) {
         main { width: min(100% - 32px, 720px); padding-top: 55px; }
+        .hero { grid-template-columns: 1fr; gap: 22px; }
+        .avatar-wrap { grid-row: 1; width: 145px; height: 145px; }
         .intro { margin-bottom: 55px; }
         .projects a { grid-template-columns: 28px 1fr auto; gap: 10px; min-height: 91px; }
         .project-detail { font-size: 12px; }
       }
+      @media (prefers-reduced-motion: reduce) { .avatar-wrap::after { animation: none; } .projects a { transition: none; } }
     </style>
   </head>
   <body>
     <main>
-      <header>
-        <p class="eyebrow">Hello, I'm</p>
-        <h1>Leon<br />Davtyan<span aria-hidden="true">.</span></h1>
-        <p class="intro">I make games. Here are a few you can play right now.</p>
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Hello, I'm</p>
+          <h1>Leon<br />Davtyan<span aria-hidden="true">.</span></h1>
+          <p class="intro">I make games. Here are a few you can play right now.</p>
+        </div>
+        <div class="avatar-wrap">
+          <img src="assets/avatar.png" width="640" height="640" alt="Illustration of Leon smiling with shoulder-length curly hair" />
+        </div>
       </header>
 
       <section aria-labelledby="projects-heading">

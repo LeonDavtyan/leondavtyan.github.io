@@ -1,6 +1,6 @@
 # Leon Davtyan
 
-A small personal page listing my games: SkateBus, Rocket, and Hulk.
+A small personal page with an illustrated avatar and links to my games: SkateBus, Rocket, and Hulk.
 
 Live site: https://leondavtyan.github.io/
 
