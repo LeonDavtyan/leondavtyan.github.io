@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f5ec" />
+    <meta name="description" content="Leon Davtyan's games and projects." />
+    <title>Leon Davtyan — Projects</title>
+    <style>
+      :root {
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #2d302a;
+        background: #f8f5ec;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; min-height: 100vh; }
+      body::before { content: ""; position: fixed; width: 420px; height: 420px; right: -150px; top: -180px; border-radius: 50%; background: #ffe6a5; filter: blur(15px); opacity: .7; pointer-events: none; }
+      main { position: relative; width: min(100% - 40px, 720px); margin: 0 auto; padding: clamp(64px, 12vh, 110px) 0 60px; }
+      .eyebrow { margin: 0 0 15px; color: #b86a29; font-size: 12px; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
+      h1 { margin: 0; font-size: clamp(52px, 11vw, 92px); line-height: .99; letter-spacing: -.075em; font-weight: 850; }
+      .intro { max-width: 470px; margin: 23px 0 70px; color: #62665b; font-size: clamp(17px, 2.5vw, 20px); line-height: 1.5; }
+      .section-heading { display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 13px; border-bottom: 2px solid #dcd9cb; }
+      h2 { margin: 0; font-size: 18px; letter-spacing: -.025em; }
+      .count { color: #9b9d8f; font-size: 13px; font-weight: 700; }
+      .projects { list-style: none; margin: 0; padding: 0; }
+      .projects li { border-bottom: 1px solid #deddd2; }
+      .projects a { display: grid; grid-template-columns: 38px 1fr auto; align-items: center; gap: 15px; min-height: 100px; padding: 17px 4px; color: inherit; text-decoration: none; border-radius: 10px; transition: background .18s, padding .18s; }
+      .projects a:hover, .projects a:focus-visible { background: #fff8e8; padding-left: 14px; padding-right: 14px; outline: none; }
+      .number { color: #bf8848; font-size: 13px; font-weight: 800; font-variant-numeric: tabular-nums; }
+      .project-name { display: block; font-size: clamp(22px, 4vw, 27px); font-weight: 750; letter-spacing: -.04em; }
+      .project-detail { display: block; margin-top: 4px; color: #77796e; font-size: 14px; }
+      .arrow { display: grid; place-items: center; width: 35px; height: 35px; border: 1px solid #c9c9b8; border-radius: 50%; color: #9b5b26; font-size: 21px; line-height: 1; }
+      footer { margin-top: 55px; color: #8a8c80; font-size: 13px; }
+      footer a { color: #805b36; text-underline-offset: 3px; }
+      @media (max-width: 480px) {
+        main { width: min(100% - 32px, 720px); padding-top: 55px; }
+        .intro { margin-bottom: 55px; }
+        .projects a { grid-template-columns: 28px 1fr auto; gap: 10px; min-height: 91px; }
+        .project-detail { font-size: 12px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">Hello, I'm</p>
+        <h1>Leon<br />Davtyan<span aria-hidden="true">.</span></h1>
+        <p class="intro">I make games. Here are a few you can play right now.</p>
+      </header>
+
+      <section aria-labelledby="projects-heading">
+        <div class="section-heading">
+          <h2 id="projects-heading">Projects</h2>
+          <span class="count">03 games</span>
+        </div>
+        <ol class="projects">
+          <li>
+            <a href="https://leondavtyan.github.io/SkateBus/">
+              <span class="number">01</span>
+              <span><span class="project-name">SkateBus</span><span class="project-detail">Buzz's Star Skate</span></span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://leondavtyan.github.io/rocket/">
+              <span class="number">02</span>
+              <span><span class="project-name">Rocket</span><span class="project-detail">Rocket Hopper</span></span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://leondavtyan.github.io/hulk/">
+              <span class="number">03</span>
+              <span><span class="project-name">Hulk</span><span class="project-detail">Golden Hulk: Skybound</span></span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        </ol>
+      </section>
+
+      <footer>More on <a href="https://github.com/LeonDavtyan">GitHub</a>.</footer>
+    </main>
+  </body>
+</html>
